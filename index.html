@@ -79,19 +79,19 @@
         'Calling the hospital'
       ]
       let msgIndex = 0
-      const nope = document.getElementById('nope')
+      const status = document.getElementById('status')
       const checking = document.getElementById('checking')
       const btn = document.querySelector('button')
       btn.onclick = () => {
         checking.textContent = checkingMsgs[msgIndex] + '...'
         msgIndex = (msgIndex + 1) % checkingMsgs.length
 
-        nope.classList.add('hidden')
+        status.classList.add('hidden')
         btn.classList.add('hidden')
         checking.classList.remove('hidden')
 
         setTimeout(() => {
-          nope.classList.remove('hidden')
+          status.classList.remove('hidden')
           btn.classList.remove('hidden')
           checking.classList.add('hidden')
         }, 2000)
